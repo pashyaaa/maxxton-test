@@ -1,0 +1,18 @@
+<button (click)="sort('name')">Sort by name</button>
+<button (click)="sort('date')">Sort by date</button>
+<input placeholder="Search..." (input)="search($event)">
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Department</th>
+        <th>Joining Date</th>
+    </tr>
+    <tr *ngFor="let data of candidate_data">
+        <td>{{data.id}}</td>
+        <td>{{data.name}}</td>
+        <td>{{data.department}}</td>
+        <td>{{data.joining_date}}</td>
+    </tr>
+</table>
+<router-outlet></router-outlet>
